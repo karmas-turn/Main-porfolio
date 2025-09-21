@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+.slide {
+  opacity: 0;
+  transform: translateX(40px);
+
+    animation: fadeIn 2s ease-out 0.1s forwards;
+
+}
+/* 
+.dark{
+  background-color: #1f2937;
+  color: white;
+} */
+
+@keyframes fadeIn {
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slid{
+  opacity: 0;
+  transform: translateX(-50%);
+    animation: fadeIns 2s ease-out 0.1s forwards;
+}
+
+
+@keyframes fadeIns {
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+    
+  }
+}
+
+
+
+ .typ {
+  
+  width: 17ch;
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid black;
+  animation: typing 7s steps(21) backwards  infinite,
+  blink 0.5s step-end infinite alternate;
+  
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to {
+    width: 89.5 ;
+  }
+}
+
+@keyframes blink {
+  50%{
+    border-color: transparent;
+  }
+}
+.lif{
+  background-image: url(/IMG_20250118_151330_813@141342451.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#home{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+
+  transition: all 0.3s ease;
+}
+
+.slider{
+
+  opacity: 0;
+  transform: translateX(-100px);
+
+  animation: slideInLeft forwards;
+  animation-timeline: view();
+  animation-range: 20px 50%;
+  
+}
+
+.slideR{
+  opacity: 0;
+  transform: translateX(90px);
+
+  animation: slideInRight forwards;
+  animation-timeline: view();
+  animation-range: 20px 80%;
+  
+}
+
+.slideUp{
+   opacity: 0;
+  transform: translateY(-90px);
+
+  animation: fadeInUp forwards;
+  animation-timeline: view();
+  animation-range: 20px 80%;
+  
+}
+
+@keyframes slideInLeft {
+  
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideInRight {
+  
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
