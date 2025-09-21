@@ -12,7 +12,7 @@ const list = document.querySelectorAll('.list');
 
 menu.addEventListener("click", ()=> {
   
-  NavMenu.classList.toggle("right-[80%]");
+ NavMenu.classList.toggle("translate-x-full"); NavMenu.classList.toggle("translate-x-0");
   NavMenu.classList.toggle("backdrop-blur-lg");
   NavMenu.classList.toggle("slide");
   list.forEach((item, index) => {
@@ -26,7 +26,7 @@ menu.addEventListener("click", ()=> {
 
 close.addEventListener("click", ()=> {
   NavMenu.classList.toggle("slide");
-  NavMenu.classList.toggle("right-[80%]"); 
+  NavMenu.classList.toggle("translate-x-full"); NavMenu.classList.toggle("translate-x-0");
   NavMenu.classList.toggle("backdrop-blur-lg");
   
   list.forEach((item, index) => {
@@ -39,7 +39,8 @@ close.addEventListener("click", ()=> {
 
 // navlink.forEach(link => 
 //   link.addEventListener("click", () => {
-//     NavMenu.classList.toggle("left-[0]");
+//     NavMenu.classList.toggle("translate-x-full"); NavMenu.classList.toggle("translate-x-0");
+ 
 //   // menu.classList.toggle("");
 //   }
 //   )
@@ -47,7 +48,8 @@ close.addEventListener("click", ()=> {
 
 list.forEach((item, index) => {
   item.addEventListener("click", () => {
-    NavMenu.classList.toggle("right-[80%]");  
+    NavMenu.classList.toggle("translate-x-full"); NavMenu.classList.toggle("translate-x-0");
+ 
     item.style.transitionDelay = `${index * 100}ms`;
     item.classList.toggle('slide');
   } )
